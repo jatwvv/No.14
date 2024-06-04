@@ -59,12 +59,96 @@ body {
     -moz-border-radius: 30px;
     -ms-border-radius: 30px;
     -o-border-radius: 30px;
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
+    box-shadow: -1px 2px 9px 1px #4a4a4a;
+}
+.container .column .content .btn:hover {
+    background-color: hsl(300, 69%, 71%);
 }
 .container .column .content .btn a {
     text-decoration: none;
     font-size: 20px;
-    font-family: "Poppins", sans-serif; 
+    font-family: "Poppins", sans-serif;
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
+    color: hsl(257, 40%, 49%);
+}
+.container .column .content .btn:hover a {
+    color: #fff;
+}
+.container .social {
+    margin-top: 50px;
+    justify-content: end;
+    display: flex;
+}
+.container .social .circle {
+    border: 2px solid #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: 0 8px;
+    cursor: pointer;
+    position: relative;
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
+}
+.container .social .circle:hover {
+    border-color: #e882e8;
 }
 .container .social img {
     width: 30px;
+    margin-left: 30px;
+    position: absolute;
+    left: -12%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transition: 0.4s;
+}
+.container .social .circle:hover img {
+    filter: invert(66%) sepia(94%) saturate(617%) hue-rotate(236deg) brightness(94%) contrast(92%);
+    -webkit-filter: invert(66%) sepia(94%) saturate(617%) hue-rotate(236deg) brightness(94%) contrast(92%);
+}
+@media (max-width: 1440px) {
+    .container {
+        background: url(images/bg-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        height: 100%;
+    }
+    .container .column {
+        display: block;
+        text-align: center;
+        padding: 0;
+    }   
+    .container .column .content h1 {
+        padding: 0;
+    }
+    .container .column .content p {
+        padding: 20px 0;
+    }
+    .container .column .content {
+        padding: 0;
+    }
+    .container .column .content .btn {
+        margin: auto;
+        margin-top: 50px;
+    }
+    .container .social {
+        justify-content: center;
+        margin-left: -35px;
+    }
 }
